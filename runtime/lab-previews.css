@@ -1,0 +1,12 @@
+/* Optional: source/concepts on the left, an actual result on the right. */
+section.lab-preview .lab-layout { display:grid; grid-template-columns:minmax(0,1fr) 350px; gap:36px; align-items:center; width:100%; min-height:0; }
+section.lab-preview .lab-source { min-width:0; }
+section.lab-preview .lab-result img { display:block; width:100%; height:auto; max-height:280px; object-fit:contain; }
+section.lab-preview .lab-result img.lab-result-motion { display:none; }
+/* The outer SVG belongs to Marp's HTML template, outside theme CSS's section scope. */
+svg.bespoke-marp-slide section.lab-preview .lab-result img.lab-result-motion { display: block !important; }
+svg.bespoke-marp-slide section.lab-preview .lab-result img.lab-result-poster { display: none !important; }
+@media print {
+  svg.bespoke-marp-slide section.lab-preview .lab-result img.lab-result-motion { display: none !important; }
+  svg.bespoke-marp-slide section.lab-preview .lab-result img.lab-result-poster { display: block !important; }
+}

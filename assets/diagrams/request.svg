@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="260" viewBox="0 0 1080 260">
+  <defs>
+    <marker id="arrow" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto"><path d="M0 0L11 5.5L0 11Z" fill="#a34e16"/></marker>
+  </defs>
+  <g font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" fill="#231f20">
+    <rect x="50" y="70" width="300" height="120" rx="6" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+    <text x="200" y="112" text-anchor="middle" font-size="27" font-weight="700">Browser</text>
+    <text x="200" y="150" text-anchor="middle" font-size="21">http://127.0.0.1:8080</text>
+
+    <rect x="730" y="70" width="300" height="120" rx="6" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+    <text x="880" y="112" text-anchor="middle" font-size="27" font-weight="700">Web Server</text>
+    <text x="880" y="150" text-anchor="middle" font-size="21">Apache + PHP + Moodle</text>
+
+    <path d="M358 108H722" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="540" y="92" text-anchor="middle" font-size="21" fill="#6b6258">HTTP Request</text>
+    <path d="M722 158H358" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="540" y="184" text-anchor="middle" font-size="21" fill="#6b6258">HTTP Response</text>
+
+    <text x="50" y="238" font-size="19" fill="#6b6258">127.0.0.1 是自己的電腦；8080 用來指定這個網站服務。</text>
+  </g>
+</svg>

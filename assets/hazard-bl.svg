@@ -1,0 +1,13 @@
+<svg width="360" height="120" viewBox="0 0 360 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hazard" width="44" height="44" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="44" height="44" fill="#231F20"/>
+      <rect x="8" width="22" height="44" fill="#F7931E"/>
+      <rect x="30" width="14" height="44" fill="#FFC20E"/>
+    </pattern>
+    <clipPath id="band">
+      <path d="M0 0H300L360 120H0Z"/>
+    </clipPath>
+  </defs>
+  <path d="M0 0H300L360 120H0Z" fill="url(#hazard)"/>
+</svg>

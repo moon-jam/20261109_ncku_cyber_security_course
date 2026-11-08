@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320">
+  <defs><marker id="arrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#a34e16"/></marker></defs>
+  <g font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" fill="#231f20">
+    <text x="16" y="30" font-size="32" font-weight="700">HTTP Response</text>
+    <rect x="16" y="45" width="968" height="267" rx="6" fill="#fffdf8" stroke="#b8ada0" stroke-width="2"/>
+    <rect x="32" y="60" width="936" height="48" rx="6" fill="#fff1d6"/>
+    <text x="48" y="93" font-size="30" font-weight="700">HTTP/1.1 200 OK</text>
+    <text x="948" y="93" font-size="26" text-anchor="end" fill="#a34e16">Status Line</text>
+    <text x="48" y="144" font-size="26" fill="#6b6258">Header Fields</text>
+    <text x="48" y="176" font-size="29">Content-Type: text/html</text>
+    <text x="48" y="208" font-size="29">Set-Cookie: PHPSESSID=…</text>
+    <line x1="32" y1="224" x2="968" y2="224" stroke="#e7dbc9" stroke-width="2"/>
+    <text x="48" y="258" font-size="26" fill="#6b6258">Message Body</text>
+    <text x="48" y="292" font-size="29">&lt;html&gt;…&lt;/html&gt;</text>
+  </g>
+</svg>

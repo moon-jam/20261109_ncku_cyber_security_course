@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="620" viewBox="0 0 1320 620">
+  <defs>
+    <marker id="arrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M1 1L11 6L1 11Z" fill="#a34e16"/>
+    </marker>
+  </defs>
+  <g font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" fill="#231f20">
+    <text x="32" y="48" font-size="30" font-weight="700">Moodle 的網站資料流</text>
+
+    <!-- Nested regions share a center line and keep distinct header bands. -->
+    <rect x="404" y="86" width="530" height="448" rx="8" fill="#fffdf8" stroke="#b8ada0" stroke-width="2"/>
+    <text x="432" y="128" font-size="28" font-weight="700" fill="#6b6258">Web Server</text>
+
+    <rect x="432" y="196" width="474" height="310" rx="6" fill="#fff1d6" stroke="#b8ada0" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="460" y="238" font-size="28" font-weight="700">PHP</text>
+
+    <rect x="460" y="302" width="418" height="176" rx="5" fill="#fffdf8" stroke="#b8ada0" stroke-width="2"/>
+    <text x="488" y="344" font-size="28" font-weight="700">Moodle Application</text>
+    <text x="488" y="396" font-size="25">首頁</text>
+    <text x="684" y="396" font-size="25">登入</text>
+    <text x="488" y="446" font-size="25">課程</text>
+    <text x="684" y="446" font-size="25">成績</text>
+
+    <!-- Browser and database align; both directions use the same two lanes. -->
+    <rect x="24" y="312" width="210" height="166" rx="6" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+    <text x="129" y="354" text-anchor="middle" font-size="28" font-weight="700">Browser</text>
+    <text x="129" y="400" text-anchor="middle" font-size="23">送出 Request</text>
+    <text x="129" y="444" text-anchor="middle" font-size="23">接收 Response</text>
+
+    <rect x="1114" y="312" width="182" height="166" rx="6" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+    <text x="1205" y="354" text-anchor="middle" font-size="28" font-weight="700">MariaDB</text>
+    <text x="1205" y="400" text-anchor="middle" font-size="23">課程、使用者</text>
+    <text x="1205" y="444" text-anchor="middle" font-size="23">成績資料</text>
+
+    <g fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M246 372H392"/>
+      <path d="M392 426H246" stroke-dasharray="7 5"/>
+      <path d="M890 372H1102"/>
+      <path d="M1102 426H890" stroke-dasharray="7 5"/>
+    </g>
+    <g text-anchor="middle" font-size="20" fill="#6b6258">
+      <text x="319" y="350">HTTP Request</text>
+      <text x="319" y="462">HTTP Response</text>
+      <text x="1024" y="350">SQL</text>
+      <text x="1024" y="462">結果</text>
+    </g>
+
+  </g>
+</svg>

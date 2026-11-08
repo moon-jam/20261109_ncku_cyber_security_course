@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="370" viewBox="0 0 1080 370">
+<defs><marker id="a" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#a34e16"/></marker></defs>
+<g font-family='"Noto Sans CJK TC","Noto Sans TC",sans-serif' fill="#231f20">
+<text x="44" y="50" font-size="30" font-weight="700">RCE 取得的是網站程序權限，不是管理員帳號</text>
+<rect x="44" y="100" width="270" height="130" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="179.0" y="157.0" text-anchor="middle" font-size="28" font-weight="700">www-data</text>
+<text x="179.0" y="191.0" text-anchor="middle" font-size="23">PHP worker 的執行身分</text>
+<path d="M322 165H390" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#a)"/>
+<rect x="398" y="100" width="270" height="130" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="533.0" y="140.0" text-anchor="middle" font-size="28" font-weight="700">config.php</text>
+<text x="533.0" y="174.0" text-anchor="middle" font-size="23">DB 連線設定</text>
+<text x="533.0" y="208.0" text-anchor="middle" font-size="23">儲存在容器內</text>
+<path d="M676 165H744" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#a)"/>
+<rect x="752" y="100" width="284" height="130" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="894.0" y="140.0" text-anchor="middle" font-size="28" font-weight="700">Moodle 測試資料</text>
+<text x="894.0" y="174.0" text-anchor="middle" font-size="23">mdl_course / 測試成績</text>
+<text x="894.0" y="208.0" text-anchor="middle" font-size="23">不是學校正式資料</text>
+<text x="44" y="304" font-size="23" fill="#6b6258">可讀取的憑證與程式權限，取決於 Lab 的檔案與資料庫設定。</text>
+<text x="44" y="340" font-size="23" fill="#a34e16">不是 root，也不是 Moodle 管理員登入。</text>
+</g></svg>

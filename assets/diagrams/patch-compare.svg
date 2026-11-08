@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="350" viewBox="0 0 1080 350">
+<defs><marker id="a" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#a34e16"/></marker></defs>
+<g font-family='"Noto Sans CJK TC","Noto Sans TC",sans-serif' fill="#231f20">
+<text x="44" y="48" font-size="30" font-weight="700">PHP 8.3.35 與 8.3.36 的對照</text>
+<rect x="60" y="100" width="420" height="160" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="270.0" y="138.0" text-anchor="middle" font-size="28" font-weight="700">PHP 8.3.35</text>
+<text x="270.0" y="172.0" text-anchor="middle" font-size="23">Lab 條件下可運作</text>
+<text x="270.0" y="206.0" text-anchor="middle" font-size="23">可取得執行證據</text>
+<text x="270.0" y="240.0" text-anchor="middle" font-size="23">Moodle 仍可開啟</text>
+<rect x="600" y="100" width="420" height="160" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="810.0" y="138.0" text-anchor="middle" font-size="28" font-weight="700">PHP 8.3.36</text>
+<text x="810.0" y="172.0" text-anchor="middle" font-size="23">stage 1 失敗（本機實測）</text>
+<text x="810.0" y="206.0" text-anchor="middle" font-size="23">沒有新的 proof</text>
+<text x="810.0" y="240.0" text-anchor="middle" font-size="23">Moodle 仍可開啟</text>
+<text x="60" y="322" font-size="22" fill="#6b6258">本機 compose 對照；單次失敗不等於安全保證。</text>
+</g></svg>

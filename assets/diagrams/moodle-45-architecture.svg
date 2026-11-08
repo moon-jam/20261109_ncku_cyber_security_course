@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="600" viewBox="0 0 1440 600">
+  <defs>
+    <marker id="arrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M1 1L11 6L1 11Z" fill="#a34e16"/>
+    </marker>
+  </defs>
+  <g font-family="'Noto Sans CJK TC','Noto Sans TC',sans-serif" fill="#231f20">
+    <text x="42" y="48" font-size="30" font-weight="700">本機 Host 與 Docker 部署</text>
+
+    <!-- Reserve separate header bands for the Host and Docker boundaries. -->
+    <rect x="24" y="78" width="1392" height="500" rx="10" fill="none" stroke="#b8ada0" stroke-width="2"/>
+    <text x="48" y="120" font-size="24" fill="#6b6258">Host</text>
+    <text x="48" y="154" font-size="18" fill="#6b6258">macOS / Linux / Windows WSL2</text>
+    <rect x="394" y="106" width="994" height="444" rx="8" fill="none" stroke="#b8ada0" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="418" y="146" font-size="24" fill="#6b6258">Docker Engine</text>
+
+    <rect x="48" y="190" width="260" height="140" rx="6" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+    <text x="178" y="238" text-anchor="middle" font-size="28" font-weight="700">Browser</text>
+    <text x="178" y="286" text-anchor="middle" font-size="22">http://127.0.0.1:8080</text>
+
+    <!-- Both containers and their mounted volumes share the same rows. -->
+    <rect x="430" y="174" width="500" height="344" rx="8" fill="#fffdf8" stroke="#b8ada0" stroke-width="2"/>
+    <text x="458" y="216" font-size="24" fill="#6b6258">Moodle 容器</text>
+    <text x="458" y="264" font-size="28" font-weight="700">Apache + PHP 8.3.35</text>
+    <text x="458" y="304" font-size="23">Moodle 4.5.15（/var/www/html）</text>
+    <text x="458" y="344" font-size="22" fill="#6b6258">Container port 80</text>
+    <text x="458" y="390" font-size="20" fill="#6b6258">Volumes（掛載）</text>
+
+    <g fill="#fff1d6" stroke="#b8ada0" stroke-width="1.5">
+      <rect x="458" y="414" width="136" height="52" rx="4"/>
+      <rect x="612" y="414" width="136" height="52" rx="4"/>
+      <rect x="766" y="414" width="136" height="52" rx="4"/>
+    </g>
+    <g text-anchor="middle" font-size="20">
+      <text x="526" y="447">moodledata</text>
+      <text x="680" y="447">configdata</text>
+      <text x="834" y="447">flagdata</text>
+    </g>
+
+    <rect x="1092" y="174" width="260" height="344" rx="8" fill="#fffdf8" stroke="#b8ada0" stroke-width="2"/>
+    <text x="1120" y="216" font-size="24" fill="#6b6258">MariaDB 容器</text>
+    <text x="1120" y="264" font-size="22" fill="#6b6258">mariadb:10.11</text>
+    <text x="1120" y="304" font-size="22">課程、使用者、成績</text>
+    <text x="1120" y="344" font-size="22" fill="#6b6258">3306（Docker 內部）</text>
+    <rect x="1120" y="414" width="204" height="52" rx="4" fill="#fff1d6" stroke="#b8ada0" stroke-width="1.5"/>
+    <text x="1222" y="447" text-anchor="middle" font-size="20">Volume：dbdata</text>
+
+    <rect x="48" y="384" width="260" height="112" rx="6" fill="#fffdf8" stroke="#b8ada0" stroke-width="2"/>
+    <text x="178" y="420" text-anchor="middle" font-size="24" font-weight="700">loot/</text>
+    <text x="178" y="452" text-anchor="middle" font-size="20" fill="#6b6258">./loot ↔ /loot</text>
+    <text x="178" y="482" text-anchor="middle" font-size="20" fill="#6b6258">proof / 暫存</text>
+
+    <!-- Keep labels centered over each clear connection lane. -->
+    <g fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M320 270H418"/>
+      <path d="M942 270H1080"/>
+    </g>
+    <path d="M320 440H418" fill="none" stroke="#a34e16" stroke-width="2" stroke-dasharray="6 4"/>
+    <text x="369" y="248" text-anchor="middle" font-size="20" fill="#6b6258">8080</text>
+    <text x="1011" y="248" text-anchor="middle" font-size="20" fill="#6b6258">SQL</text>
+  </g>
+</svg>

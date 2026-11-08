@@ -1,0 +1,61 @@
+.marp-run { display: none; }
+.marp-runnable { position: relative; padding-inline-end: 4em; }
+.marp-code-container { --runner-bg: #f6f8fa; --runner-fg: #333; --runner-border: #e2e4e7; background: var(--runner-bg); color: var(--runner-fg); border-radius: 6px; overflow: hidden; }
+section.invert .marp-code-container { --runner-bg: #292b30; --runner-fg: #eee; --runner-border: #45474c; }
+.marp-code-container > marp-pre, .marp-code-container > pre { margin: 0; border-radius: 0; background: transparent; }
+.marp-code-run-button { position: absolute; top: 0.25em; right: 0.45em; padding: 0; border: 0; background: transparent; color: inherit; font: 30px/1 sans-serif; cursor: pointer; }
+.marp-code-output-toggle { position: absolute; top: 0.25em; right: 1.65em; width: 1em; height: 1em; padding: 0; border: 0; background: transparent; color: inherit; font: 30px/1 sans-serif; cursor: pointer; }
+.marp-code-output-toggle[hidden] { display: none; }
+.marp-code-output-toggle svg { display: block; width: 100%; height: 100%; }
+.marp-code-output-toggle[aria-expanded="false"] svg { transform: rotate(180deg); }
+.marp-runner-inline { max-height: 210px; overflow: auto; font: 24px/1.4 monospace; border-top: 1px solid var(--runner-border); padding: 18px 24px; }
+.marp-runner-inline[hidden], .marp-runner-input[hidden], .marp-runner-status[hidden] { display: none; }
+.marp-runner-inline .marp-runner-output { font: inherit; min-height: 0; max-height: 150px; background: transparent; padding: 0; }
+.marp-runner-inline .marp-runner-status { margin: 4px 0 0; font: 14px/1.3 sans-serif; }
+.marp-runner-input { display: flex; align-items: baseline; gap: 8px; margin-top: 4px; }
+.marp-runner-input label { flex-shrink: 0; }
+.marp-runner-input textarea { box-sizing: border-box; flex: 1; min-width: 0; width: 100%; color: inherit; background: transparent; border: 0; outline-offset: 2px; font: inherit; margin: 0; padding: 0; resize: none; }
+.marp-runner-input button { flex-shrink: 0; font: inherit; background: transparent; color: inherit; border: 0; cursor: pointer; }
+.marp-runner-dialog { --runner-bg: #fff; --runner-fg: #20252b; --runner-border: #888; box-sizing: border-box; width: min(1200px, 92vw); max-height: 90vh; padding: 20px; border: 1px solid var(--runner-border); background: var(--runner-bg); color: var(--runner-fg); font: 20px/1.4 "Noto Sans TC", "PingFang TC", sans-serif; }
+.marp-runner-dialog[data-theme="dark"] { --runner-bg: #202228; --runner-fg: #eee; --runner-border: #aaa; }
+.marp-runner-dialog::backdrop { background: #0007; }
+.marp-runner-dialog header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.marp-runner-dialog h2 { font-size: 1.2em; margin: 0; }
+.marp-dialog-source { padding: 16px; margin: 16px 0 0; border: 0; background: #f6f8fa; font: 18px/1.4 monospace; }
+.marp-runner-dialog .marp-runner-terminal { padding: 16px; background: #f6f8fa; border-top: 1px solid #e2e4e7; }
+.marp-runner-dialog .marp-runner-output { min-height: 0; }
+.marp-runner-dialog .marp-runner-output:empty { display: none; }
+.marp-runner-dialog[data-theme="dark"] .marp-dialog-source, .marp-runner-dialog[data-theme="dark"] .marp-runner-terminal { background: #292b30; border-color: #45474c; }
+.marp-dialog-source .marp-source-editor { min-height: 224px; }
+.marp-dialog-source .marp-source-editor > code { max-height: 35vh; }
+.marp-runner-output { margin: 0; min-height: 100px; max-height: 30vh; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font: 18px/1.4 monospace; }
+.marp-runner-status { font-size: 0.85em; }
+.marp-runner-dialog footer { display: flex; gap: 12px; margin-top: 12px; }
+.marp-runner-dialog button { padding: 6px 12px; border: 1px solid var(--runner-border); background: var(--runner-bg); color: var(--runner-fg); font: inherit; cursor: pointer; }
+.marp-runner-dialog button:disabled { opacity: 0.5; cursor: default; }
+.marp-runner-dialog :focus-visible, .marp-code-container :focus-visible { outline: 2px solid #3273b8; outline-offset: 2px; }
+@media print { .marp-code-run-button, .marp-code-output-toggle, .marp-runner-dialog, .marp-runner-inline { display: none !important; } .marp-code-container { display: contents; } }
+
+section .marp-code-container > :is(pre, marp-pre) { border: 0 !important; box-shadow: none !important; border-radius: 0 !important; margin: 0 !important; background: transparent !important; }
+section .marp-code-container .marp-runner-output { border: 0 !important; border-radius: 0 !important; box-shadow: none !important; background: transparent !important; padding: 0 !important; font: inherit !important; }
+
+.marp-source-editor { display: grid; position: relative; overflow: hidden; font: inherit; text-align: left; }
+.marp-source-editor > code { grid-area: 1 / 1; display: block; overflow: hidden; max-height: 360px; padding: 0; margin: 0; font: inherit; white-space: pre; tab-size: 2; pointer-events: none; }
+.marp-source-editor > .marp-source-input { position: absolute; inset: 0; box-sizing: border-box; display: block; width: 100%; height: 100%; padding: 0; margin: 0; border: 0; background: transparent; color: transparent; caret-color: var(--runner-fg, #333); -webkit-text-fill-color: transparent; font: inherit; letter-spacing: inherit; white-space: pre; tab-size: 2; resize: none; outline-offset: -2px; }
+section.invert .marp-source-input { caret-color: #eee; }
+.marp-source-input::selection { background: #4080c044; }
+.marp-editable-source { height: auto !important; min-height: 0 !important; }
+.marp-editable-source .marp-source-editor { width: 100%; min-width: 0; }
+.marp-source-input:focus, .marp-source-input:focus-visible,
+.marp-runner-input textarea:focus, .marp-runner-input textarea:focus-visible { border: 0; outline: none; box-shadow: none; }
+.marp-runner-dialog .hljs-keyword, .marp-runner-dialog .hljs-type, .marp-runner-dialog .hljs-literal { color: #d73a49; }
+.marp-runner-dialog .hljs-string, .marp-runner-dialog .hljs-regexp, .marp-runner-dialog .hljs-meta { color: #032f62; }
+.marp-runner-dialog .hljs-number, .marp-runner-dialog .hljs-built_in { color: #005cc5; }
+.marp-runner-dialog .hljs-title { color: #6f42c1; }
+.marp-runner-dialog .hljs-comment { color: #6a737d; }
+.marp-runner-dialog[data-theme="dark"] .hljs-keyword, .marp-runner-dialog[data-theme="dark"] .hljs-type, .marp-runner-dialog[data-theme="dark"] .hljs-literal { color: #ff7b72; }
+.marp-runner-dialog[data-theme="dark"] .hljs-string, .marp-runner-dialog[data-theme="dark"] .hljs-regexp, .marp-runner-dialog[data-theme="dark"] .hljs-meta { color: #a5d6ff; }
+.marp-runner-dialog[data-theme="dark"] .hljs-number, .marp-runner-dialog[data-theme="dark"] .hljs-built_in { color: #79c0ff; }
+.marp-runner-dialog[data-theme="dark"] .hljs-title { color: #d2a8ff; }
+.marp-runner-dialog[data-theme="dark"] .hljs-comment { color: #8b949e; }
+@media print { .marp-source-input { display: none !important; } }

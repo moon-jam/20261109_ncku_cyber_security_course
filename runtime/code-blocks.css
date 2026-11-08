@@ -1,0 +1,23 @@
+.marp-code { display: none; }
+svg.bespoke-marp-slide section .marp-code-limited > code {
+  display: block !important;
+  max-height: calc(var(--marp-code-lines) * 1lh + 1px) !important;
+  overflow: auto !important;
+  white-space: pre;
+  overscroll-behavior: contain;
+}
+svg.bespoke-marp-slide .marp-code-limited .marp-source-editor > code {
+  max-height: calc(var(--marp-code-lines) * 1lh + 1px) !important;
+}
+svg.bespoke-marp-slide .marp-source-input { overscroll-behavior: contain; }
+@media print {
+  svg.bespoke-marp-slide section .marp-code-limited > code,
+  svg.bespoke-marp-slide .marp-code-limited .marp-source-editor > code {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+/* 上色層可由編輯器同步 scrollTop，不能讓主題改成 overflow:visible。 */
+svg.bespoke-marp-slide .marp-code-limited .marp-source-editor > code {
+  overflow: hidden !important;
+}

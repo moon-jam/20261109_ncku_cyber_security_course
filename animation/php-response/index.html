@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PHP 如何產生網頁</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fffaf1;color:#231f20;font:17px/1.35 "Noto Sans TC","PingFang TC",sans-serif}.controls{display:flex;align-items:center;gap:10px;margin:2px 0 10px}input{width:78px;padding:6px;font:inherit;border:1px solid #b6ada0;background:white}button{font:inherit;padding:7px 18px;border:1px solid #a34e16;background:#fff1d6;cursor:pointer}.flow{display:grid;grid-template-columns:1fr 55px 1fr;align-items:center}.arrow{color:#a34e16;text-align:center;font-size:34px}h2{font-size:19px;margin:0 0 6px}pre{font:17px/1.35 monospace;white-space:pre-wrap;margin:0;background:#f6f8fa;padding:12px;min-height:160px;border:1px solid #dedad3}.result{background:white;padding:12px;min-height:160px;border:1px solid #dedad3}.result h1{font-size:24px;margin:0 0 8px}.result p{font-size:22px;margin:0}.note{font-size:13px;color:#6b6258;margin-top:8px}@media(max-width:700px){body{font-size:18px}.flow{grid-template-columns:1fr 35px 1fr}pre{font-size:17px;padding:12px}.result{padding:12px}.result h1{font-size:25px}}
+</style>
+<form id="demo"><div class="controls">輸入兩個數字 <input id="a" aria-label="第一個數字" type="number" min="0" max="99" value="2"> ＋ <input id="b" aria-label="第二個數字" type="number" min="0" max="99" value="3"><button>送出請求</button><span id="status" aria-live="polite"></span></div></form>
+<div class="flow"><div><h2>伺服器上的 PHP 程式</h2><pre id="code"></pre></div><div class="arrow">→</div><div><h2>瀏覽器收到的頁面</h2><div class="result"><h1>課程首頁</h1><p id="answer"></p></div></div></div>
+<p class="note">這是固定範例的輸出對照，未啟動 PHP。真正的 PHP 在伺服器執行；瀏覽器收到的是結果。</p>
+<script>
+const a=document.querySelector('#a'),b=document.querySelector('#b');function render(){const x=Math.max(0,Math.min(99,Number(a.value)||0)),y=Math.max(0,Math.min(99,Number(b.value)||0));document.querySelector('#code').textContent=`<h1>課程首頁</h1>\n<p>\n<?php\n  echo ${x} + ${y};\n?>\n</p>`;document.querySelector('#answer').textContent=x+y;}document.querySelector('#demo').addEventListener('submit',e=>{e.preventDefault();render();document.querySelector('#status').textContent='已更新結果';});render();
+</script></html>

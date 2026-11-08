@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="330" viewBox="0 0 1080 330">
+  <defs>
+    <marker id="arrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#a34e16"/></marker>
+  </defs>
+  <g font-family='"Noto Sans CJK TC","Noto Sans TC",sans-serif' fill="#231f20">
+    <text x="44" y="48" font-size="30" font-weight="700">同一個 request，不同階段的記憶體上限</text>
+
+    <rect x="36" y="90" width="300" height="122" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+    <text x="186" y="128" text-anchor="middle" font-size="28" font-weight="700">Request startup</text>
+    <text x="186" y="162" text-anchor="middle" font-size="23">PHP 先解析輸入</text>
+    <text x="186" y="196" text-anchor="middle" font-size="23">memory_limit = 8M</text>
+
+    <rect x="406" y="90" width="300" height="122" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+    <text x="556" y="128" text-anchor="middle" font-size="28" font-weight="700">執行 /index.php</text>
+    <text x="556" y="162" text-anchor="middle" font-size="23">config.php 執行</text>
+    <text x="556" y="196" text-anchor="middle" font-size="23">ini_set → 256M</text>
+
+    <rect x="776" y="90" width="268" height="122" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+    <text x="910" y="144" text-anchor="middle" font-size="28" font-weight="700">Moodle render</text>
+    <text x="910" y="180" text-anchor="middle" font-size="23">載入頁面與 DB</text>
+
+    <!-- Brown arrows show sequence; gray ticks only locate stages on the timeline. -->
+    <g fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M348 151H394"/>
+      <path d="M718 151H764"/>
+    </g>
+    <g stroke="#b8ada0" stroke-width="2">
+      <line x1="68" y1="244" x2="1012" y2="244"/>
+      <line x1="186" y1="224" x2="186" y2="244"/>
+      <line x1="556" y1="224" x2="556" y2="244"/>
+      <line x1="910" y1="224" x2="910" y2="244"/>
+    </g>
+    <text x="68" y="278" font-size="22" fill="#6b6258">攻擊請求可能在 startup 就 OOM，還沒走到 config.php。</text>
+    <text x="68" y="314" font-size="22" fill="#6b6258">8M 是這個 Lab 的再現條件，不是主機只有 8MB RAM。</text>
+  </g>
+</svg>

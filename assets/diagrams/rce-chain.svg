@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="350" viewBox="0 0 1080 350">
+<defs><marker id="a" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#a34e16"/></marker></defs>
+<g font-family='"Noto Sans CJK TC","Noto Sans TC",sans-serif' fill="#231f20">
+<text x="44" y="48" font-size="30" font-weight="700">3em0 PoC 的高層流程</text>
+<rect x="36" y="100" width="200" height="118" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="136.0" y="138" text-anchor="middle" font-size="28" font-weight="700">Stage 1–2</text>
+<text x="136.0" y="168.0" text-anchor="middle" font-size="23">洩漏 chunk</text>
+<text x="136.0" y="202.0" text-anchor="middle" font-size="23">取得 libphp 基底</text>
+<path d="M244 159H304" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#a)"/>
+<rect x="312" y="100" width="220" height="118" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="422.0" y="138" text-anchor="middle" font-size="28" font-weight="700">偽造結構</text>
+<text x="422.0" y="168.0" text-anchor="middle" font-size="23">HashTable</text>
+<text x="422.0" y="202.0" text-anchor="middle" font-size="23">pDestructor</text>
+<path d="M540 159H600" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#a)"/>
+<rect x="608" y="100" width="200" height="118" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="708.0" y="151.0" text-anchor="middle" font-size="28" font-weight="700">呼叫函式</text>
+<text x="708.0" y="185.0" text-anchor="middle" font-size="23">zif_system</text>
+<path d="M816 159H876" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#a)"/>
+<rect x="884" y="100" width="156" height="118" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="962.0" y="151.0" text-anchor="middle" font-size="28" font-weight="700">命令</text>
+<text x="962.0" y="185.0" text-anchor="middle" font-size="23">www-data</text>
+<text x="44" y="286" font-size="22" fill="#6b6258">這是公開 PoC 的特定利用路徑，不是「所有記憶體錯誤都會自動 RCE」。</text>
+<text x="44" y="322" font-size="22" fill="#6b6258">ASLR／offset／worker 條件會影響能否重現。</text>
+</g></svg>

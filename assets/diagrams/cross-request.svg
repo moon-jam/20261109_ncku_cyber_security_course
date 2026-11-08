@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="350" viewBox="0 0 1080 350">
+<defs><marker id="a" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#a34e16"/></marker></defs>
+<g font-family='"Noto Sans CJK TC","Noto Sans TC",sans-serif' fill="#231f20">
+<text x="44" y="48" font-size="30" font-weight="700">Request A 留下的狀態，Request B 仍可能使用</text>
+<rect x="36" y="96" width="260" height="130" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="166.0" y="136.0" text-anchor="middle" font-size="28" font-weight="700">Request A</text>
+<text x="166.0" y="170.0" text-anchor="middle" font-size="23">session 資料配置</text>
+<text x="166.0" y="204.0" text-anchor="middle" font-size="23">OOM 中斷</text>
+<rect x="390" y="96" width="300" height="130" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="540.0" y="136.0" text-anchor="middle" font-size="28" font-weight="700">同一個 worker</text>
+<text x="540.0" y="170.0" text-anchor="middle" font-size="23">狀態沒有完整清理</text>
+<text x="540.0" y="204.0" text-anchor="middle" font-size="23">指標仍指向舊位置</text>
+<rect x="784" y="96" width="260" height="130" rx="5" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="914.0" y="136.0" text-anchor="middle" font-size="28" font-weight="700">Request B</text>
+<text x="914.0" y="170.0" text-anchor="middle" font-size="23">重用舊位置</text>
+<text x="914.0" y="204.0" text-anchor="middle" font-size="23">造成 UAF</text>
+<path d="M304 161H382" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#a)"/>
+<path d="M698 161H776" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#a)"/>
+<text x="44" y="286" font-size="22" fill="#6b6258">UAF = Use-After-Free：資料已釋放，程式仍拿著舊指標使用。</text>
+<text x="44" y="322" font-size="22" fill="#6b6258">不是每個 OOM 都會造成 RCE；這裡是這份 PoC 的特定路徑。</text>
+</g></svg>

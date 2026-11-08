@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="240" viewBox="0 0 1080 240">
+<defs><marker id="arrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M1 1L11 6L1 11Z" fill="#a34e16"/></marker></defs>
+<g font-family="Noto Sans CJK TC, Noto Sans TC, sans-serif" fill="#231f20">
+<rect x="20.0" y="60" width="207.5" height="120" rx="4" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="123.75" y="130.0" text-anchor="middle" font-size="28" font-weight="700">收到請求</text>
+<path d="M235.5 120H288.5" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="297.5" y="60" width="207.5" height="120" rx="4" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="401.25" y="113.0" text-anchor="middle" font-size="28" font-weight="700">PHP 準備</text>
+<text x="401.25" y="147.0" text-anchor="middle" font-size="24" font-weight="400">輸入與執行環境</text>
+<path d="M513.0 120H566.0" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="540.0" y="220" text-anchor="middle" font-size="23">程式開始</text>
+<rect x="575.0" y="60" width="207.5" height="120" rx="4" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="678.75" y="113.0" text-anchor="middle" font-size="28" font-weight="700">執行 Moodle</text>
+<text x="678.75" y="147.0" text-anchor="middle" font-size="24" font-weight="400">產生頁面</text>
+<path d="M790.5 120H843.5" fill="none" stroke="#a34e16" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="817.5" y="220" text-anchor="middle" font-size="23">程式結束</text>
+<rect x="852.5" y="60" width="207.5" height="120" rx="4" fill="#fff1d6" stroke="#b8ada0" stroke-width="2"/>
+<text x="956.25" y="113.0" text-anchor="middle" font-size="28" font-weight="700">PHP 清理</text>
+<text x="956.25" y="147.0" text-anchor="middle" font-size="24" font-weight="400">釋放本次資源</text>
+</g></svg>

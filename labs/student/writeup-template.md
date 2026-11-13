@@ -1,5 +1,7 @@
 # Writeup Template
 
+> **Deadline: 2026/11/27 23:59 (UTC+8)**
+> 
 > You may reorganize, rename, or replace the sections in this template to fit your own writeup. You do not have to follow the exact structure. What matters is that your writeup covers the required grading areas.
 >
 > Do not claim steps you did not actually perform. Failed attempts and troubleshooting are valid evidence when reported honestly.
@@ -8,7 +10,7 @@
 >
 > Grading: environment 20%, source and conditions 20%, reproduction and evidence 30%, patching 20%, fourth effect 10%. Each bonus item is +10%, with a total cap of 100%.
 >
-> Format: PDF
+> Submission Format: PDF
 >
 > Nice tool for converting Markdown to PDF (good for handling page breaks): https://md2pdf.moon-jam.me/ 
 
@@ -16,6 +18,22 @@
 |---|---|
 | Name | {{name}} |
 | Student ID | {{student_id}} |
+
+Please complete the following self-assessment table. The relevant sections are provided as a reference. You may update them to match your writeup or briefly describe what you achieved.
+
+If your final grade differs from your expected score, the reasons will be explained in the assignment feedback.
+
+| Grading Area | Achievement / Section | Expected Score |
+|---|---|---|
+| Environment (20%) | Section 2 | {{score}} / 20 |
+| CVE Source and Conditions (20%) | Section 1 (CVE & PoC Sources), Section 2 (Requirements & Conditions) | {{score}} / 20 |
+| Reproduction and Evidence (30%) | Section 3 (Steps & Commands), Section 4 (Results & Verification) | {{score}} / 30 |
+| Patch Verification (20%) | Section 5 | {{score}} / 20 |
+| Fourth Effect (10%) | Section 6 | {{score}} / 10 |
+| Bonus 1 — PoC Mechanism (+10%) | Section 8 — Bonus 1 | {{score}} / 10 |
+| Bonus 2 — Additional Impact (+10%) | Section 8 — Bonus 2 | {{score}} / 10 |
+|||
+| **Total (capped at 100)** | | **{{total}} / 100** |
 
 ## 1. CVE and PoC Source
 
